@@ -10,7 +10,8 @@ const StatAttaque: React.FC = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`${apiUrl}stat-attaques`);
+          const response = await axios.get(`${apiUrl}statattaques`);
+          console.table(response.data);
           setData(response.data);
         } catch (error) {
           console.error('Erreur lors de la récupération des données:', error);
@@ -21,8 +22,9 @@ const StatAttaque: React.FC = () => {
 
   return (
     <section>
-        <h1>Statistiques des Équipes</h1>
-        <table  className="fixed_headers">
+        <h1>Statistiques des Équipes <span style={{color:"red", fontWeight:"normal" }} >(attquants)</span></h1>
+        <div className="table-container">
+          <table className="fixed_headers">
             <tr>
                 <th>Équipe</th>
                 <th>Compétition</th>
@@ -44,6 +46,7 @@ const StatAttaque: React.FC = () => {
                 </tr>
                 ))}
         </table>
+      </div>
     </section>
   );
 };

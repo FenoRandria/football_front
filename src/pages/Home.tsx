@@ -30,15 +30,16 @@ const Home: React.FC = () => {
             </nav>
           </header>
 
+
           <div className="mini-nav">
             <nav className="navdiv">
               <Link to="/general" className={activeLinkSous === 'general' ? 'actif' : ''} onClick={() => handleLinkClickSous('general')}>General</Link>
               <Link to="/defense" className={activeLinkSous === 'defense' ? 'actif' : ''} onClick={() => handleLinkClickSous('defense')}>Defense</Link>
               <Link to="/attaque" className={activeLinkSous === 'attaque' ? 'actif' : ''} onClick={() => handleLinkClickSous('attaque')}>Attaque</Link>
+              
             </nav>
           </div>
 
-          {/* Définissez les routes pour chaque composant */}
           <Route path="/general" exact component={StatGenerale} />
           <Route path="/defense" component={StatDefense} />
           <Route path="/attaque" component={StatAttaque} />
