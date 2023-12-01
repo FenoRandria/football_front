@@ -10,7 +10,7 @@ const StatDefense: React.FC = () =>
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`${apiUrl}statdefenses`);
+          const response = await axios.get(`${apiUrl}stat-defenses`);
           setData(response.data);
         } catch (error) {
           console.error('Erreur lors de la récupération des données:', error);

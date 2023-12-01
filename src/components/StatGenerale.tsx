@@ -12,7 +12,7 @@ const StatGenerale: React.FC = () => {
     useEffect(() => {
       const fetchData = async () => {
         try {
-          const response = await axios.get(`${apiUrl}statgenerales`);
+          const response = await axios.get(`${apiUrl}stat-generales`);
           setData(response.data);
         } catch (error) {
           console.error('Erreur lors de la récupération des données:', error);
